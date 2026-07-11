@@ -70,7 +70,7 @@ function RegisterPage() {
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" required placeholder="you@cypher.app" />
+              <Input id="email" type="email" required placeholder="you@signal.app" />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>

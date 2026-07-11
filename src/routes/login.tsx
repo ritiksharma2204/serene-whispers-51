@@ -66,7 +66,7 @@ function LoginPage() {
           <form onSubmit={onSubmit} className="mt-8 space-y-4">
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" required placeholder="you@cypher.app" />
+              <Input id="email" type="email" required placeholder="you@signal.app" />
             </div>
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">

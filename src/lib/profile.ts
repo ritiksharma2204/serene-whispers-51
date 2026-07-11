@@ -13,7 +13,7 @@ export const defaultProfile: Profile = {
   name: "Alex Rivera",
   username: "alex.rivera",
   bio: "Designing calm software. Coffee, cameras, and long walks.",
-  email: "alex@cypher.app",
+  email: "alex@signal.app",
   phone: "+1 (555) 010-2048",
   status: "Available",
 };
