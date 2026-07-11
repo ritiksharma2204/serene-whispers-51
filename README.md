@@ -348,3 +348,5 @@ https://github.com/ritiksharma2204
 # 📄 License
 
 This project was developed solely for educational purposes as part of an SDE Full Stack Assignment.
+
+> **Note:** The frontend is implemented using React + Vite + TypeScript instead of Next.js to prioritize rapid development while preserving the required user experience, architecture, and real-time functionality.
