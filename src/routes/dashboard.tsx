@@ -18,6 +18,9 @@ import { conversations as seed } from "@/lib/seed";
 import { ConversationList } from "@/components/chat/conversation-list";
 import { ChatWindow } from "@/components/chat/chat-window";
 import { Avatar } from "@/components/chat/avatar";
+import { useProfile } from "@/lib/profile";
+
+
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
@@ -30,16 +33,28 @@ export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
 });
 
-const me = {
-  name: "You",
-  initials: "YO",
-  color: "oklch(0.55 0.2 262)",
-  online: true,
-};
+function initialsOf(name: string) {
+  return name
+    .split(" ")
+    .filter(Boolean)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+}
+
 
 function Dashboard() {
   const [activeId, setActiveId] = useState(seed[0].id);
   const [query, setQuery] = useState("");
+  const { profile } = useProfile();
+  const me = {
+    name: profile.name,
+    initials: initialsOf(profile.name),
+    color: "oklch(0.55 0.2 262)",
+    online: true,
+  };
+
 
   const filtered = seed.filter((c) =>
     c.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -93,19 +108,25 @@ function Dashboard() {
         <div className="flex items-center gap-3 border-t border-sidebar-border px-4 py-3">
           <Avatar conversation={me} size={36} showStatus />
           <div className="min-w-0 flex-1">
-            <div className="truncate text-sm font-semibold text-foreground">You</div>
-            <div className="truncate text-xs text-muted-foreground">Online</div>
+            <div className="truncate text-sm font-semibold text-foreground">{profile.name}</div>
+            <div className="truncate text-xs text-muted-foreground">{profile.status}</div>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Settings">
+
                 <Settings className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
               <DropdownMenuLabel>Account</DropdownMenuLabel>
-              <DropdownMenuItem><User className="mr-2 h-4 w-4" /> Profile</DropdownMenuItem>
-              <DropdownMenuItem><Settings className="mr-2 h-4 w-4" /> Settings</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/profile"><User className="mr-2 h-4 w-4" /> Profile</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/settings"><Settings className="mr-2 h-4 w-4" /> Settings</Link>
+              </DropdownMenuItem>
+
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <Link to="/"><LogOut className="mr-2 h-4 w-4" /> Sign out</Link>
