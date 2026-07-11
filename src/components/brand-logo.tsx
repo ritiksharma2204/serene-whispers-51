@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/signal-logo.png.asset.json";
+import logoAsset from "@/assets/signal-logo.png";
 
 type Props = {
   className?: string;
