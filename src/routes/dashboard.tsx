@@ -120,8 +120,13 @@ function Dashboard() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">
               <DropdownMenuLabel>Account</DropdownMenuLabel>
-              <DropdownMenuItem><User className="mr-2 h-4 w-4" /> Profile</DropdownMenuItem>
-              <DropdownMenuItem><Settings className="mr-2 h-4 w-4" /> Settings</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/profile"><User className="mr-2 h-4 w-4" /> Profile</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/settings"><Settings className="mr-2 h-4 w-4" /> Settings</Link>
+              </DropdownMenuItem>
+
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <Link to="/"><LogOut className="mr-2 h-4 w-4" /> Sign out</Link>
