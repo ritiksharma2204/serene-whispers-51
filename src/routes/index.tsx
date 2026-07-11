@@ -9,13 +9,13 @@ import { DeviceMockup } from "@/components/device-mockup";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cypher — Private, encrypted messaging" },
+      { title: "Signal — Private, encrypted messaging" },
       {
         name: "description",
         content:
-          "Cypher is a modern privacy-first messenger with end-to-end encryption, seamless sync, and a beautifully minimal design.",
+          "Signal is a modern privacy-first messenger with end-to-end encryption, seamless sync, and a beautifully minimal design.",
       },
-      { property: "og:title", content: "Cypher — Private, encrypted messaging" },
+      { property: "og:title", content: "Signal — Private, encrypted messaging" },
       {
         property: "og:description",
         content: "Modern, private messaging with end-to-end encryption.",
@@ -70,7 +70,7 @@ function LandingPage() {
               Conversations that stay <span className="italic">between you</span>.
             </h1>
             <p className="mt-5 max-w-lg text-base text-white/80 sm:text-lg">
-              Cypher is a modern, privacy-focused messenger. End-to-end encrypted by default,
+              Signal is a modern, privacy-focused messenger. End-to-end encrypted by default,
               beautifully minimal, and fast on every device.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -175,7 +175,7 @@ function LandingPage() {
               size="lg"
               className="rounded-full bg-white px-6 text-brand hover:bg-white/90"
             >
-              <Link to="/register">Get Cypher free</Link>
+              <Link to="/register">Get Signal free</Link>
             </Button>
           </div>
         </div>
@@ -184,7 +184,7 @@ function LandingPage() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
           <BrandLogo />
-          <div>© {new Date().getFullYear()} Cypher. Private by design.</div>
+          <div>© {new Date().getFullYear()} Signal. Private by design.</div>
         </div>
       </footer>
     </div>

@@ -15,7 +15,7 @@ import { useProfile, saveProfile, type Profile } from "@/lib/profile";
 export const Route = createFileRoute("/profile")({
   head: () => ({
     meta: [
-      { title: "Profile — Cypher" },
+      { title: "Profile — Signal" },
       { name: "robots", content: "noindex" },
     ],
   }),

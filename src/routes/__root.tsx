@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cypher — Private, encrypted messaging" },
+      { title: "Signal — Private, encrypted messaging" },
       {
         name: "description",
         content:
-          "Cypher is a modern, privacy-first messenger with end-to-end encryption and a beautifully minimal design.",
+          "Signal is a modern, privacy-first messenger with end-to-end encryption and a beautifully minimal design.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

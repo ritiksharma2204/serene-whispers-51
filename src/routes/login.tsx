@@ -10,8 +10,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Sign in — Cypher" },
-      { name: "description", content: "Sign in to your Cypher account." },
+      { title: "Sign in — Signal" },
+      { name: "description", content: "Sign in to your Signal account." },
     ],
   }),
   component: LoginPage,
@@ -39,7 +39,7 @@ function LoginPage() {
             Private, encrypted, and instantly synced across all your devices.
           </p>
         </div>
-        <div className="text-xs text-white/60">© {new Date().getFullYear()} Cypher</div>
+        <div className="text-xs text-white/60">© {new Date().getFullYear()} Signal</div>
       </div>
 
       <div className="flex flex-col bg-background">
@@ -85,7 +85,7 @@ function LoginPage() {
           </form>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            New to Cypher?{" "}
+            New to Signal?{" "}
             <Link to="/register" className="font-medium text-brand hover:underline">
               Create an account
             </Link>
