@@ -10,8 +10,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "Create account — Cypher" },
-      { name: "description", content: "Create your Cypher account in seconds." },
+      { title: "Create account — Signal" },
+      { name: "description", content: "Create your Signal account in seconds." },
     ],
   }),
   component: RegisterPage,
@@ -39,7 +39,7 @@ function RegisterPage() {
             Set up in under a minute. No phone number required to try the web app.
           </p>
         </div>
-        <div className="text-xs text-white/60">© {new Date().getFullYear()} Cypher</div>
+        <div className="text-xs text-white/60">© {new Date().getFullYear()} Signal</div>
       </div>
 
       <div className="flex flex-col bg-background">
@@ -70,7 +70,7 @@ function RegisterPage() {
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" required placeholder="you@cypher.app" />
+              <Input id="email" type="email" required placeholder="you@signal.app" />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>

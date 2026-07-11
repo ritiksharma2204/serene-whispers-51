@@ -17,7 +17,7 @@ export function DeviceMockup({ className }: { className?: string }) {
           <div className="flex items-center justify-between border-b border-border px-4 pt-8 pb-3">
             <div className="flex items-center gap-2">
               <LogoMark className="h-6 w-6" />
-              <span className="text-sm font-semibold text-foreground">Cypher</span>
+              <span className="text-sm font-semibold text-foreground">Signal</span>
             </div>
             <span className="text-[10px] text-muted-foreground">9:41</span>
           </div>

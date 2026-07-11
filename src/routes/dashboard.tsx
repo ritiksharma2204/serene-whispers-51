@@ -25,8 +25,8 @@ import { useProfile } from "@/lib/profile";
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Inbox — Cypher" },
-      { name: "description", content: "Your encrypted Cypher inbox." },
+      { title: "Inbox — Signal" },
+      { name: "description", content: "Your encrypted Signal inbox." },
       { name: "robots", content: "noindex" },
     ],
   }),

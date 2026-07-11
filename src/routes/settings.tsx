@@ -26,7 +26,7 @@ import { useProfile, usePreferences } from "@/lib/profile";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — Cypher" },
+      { title: "Settings — Signal" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -182,14 +182,14 @@ function SettingsPage() {
           <NavRow
             icon={Trash2}
             title="Delete account"
-            description="Permanently remove your Cypher account."
+            description="Permanently remove your Signal account."
             danger
             onClick={() => toast.error("Delete account isn't wired up yet")}
           />
         </Section>
 
         <p className="pt-2 text-center text-xs text-muted-foreground">
-          Cypher · v1.0.0 · End-to-end encrypted
+          Signal · v1.0.0 · End-to-end encrypted
         </p>
       </motion.main>
     </div>
