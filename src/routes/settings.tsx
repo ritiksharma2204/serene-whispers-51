@@ -297,9 +297,10 @@ function NavRow(props: {
   if (to) {
     return (
       <Link to={to} className="block">
-        <RowShell {...rest} right={<span className="text-muted-foreground">›</span>} onClick={() => {}} />
+        <RowShell {...rest} right={<span className="text-muted-foreground">›</span>} />
       </Link>
     );
   }
   return <RowShell {...rest} onClick={onClick} right={<span className="text-muted-foreground">›</span>} />;
 }
+
