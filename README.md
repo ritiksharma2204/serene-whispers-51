@@ -1,76 +1,14 @@
-# Signal Clone – Secure Messaging Platform
+# 🔒 Signal Clone – Secure Messaging Platform
 
-A full-stack secure messaging application inspired by **Signal Messenger**, built as part of an SDE Full-Stack Assignment.
+A modern **Signal-inspired secure messaging platform** built as a Full Stack SDE Assignment.
 
-The project recreates Signal's modern, privacy-focused interface and core messaging workflows using **React + TypeScript** on the frontend and **FastAPI + SQLite** on the backend, with **WebSockets** enabling real-time communication.
-
----
-
-## Demo
-
-**Live Demo:** _Add your deployed URL here_
-
-**GitHub Repository:** _Add your GitHub repository URL here_
+The application recreates Signal's clean, privacy-first interface while implementing real-time messaging using **FastAPI WebSockets**, user authentication, and a responsive React frontend.
 
 ---
 
-# Features
+## 🚀 Tech Stack
 
-## Authentication
-
-- User Registration
-- User Login
-- Password hashing using bcrypt
-- Session-ready authentication flow
-- Mocked authentication suitable for assignment requirements
-
----
-
-## Conversations
-
-- Signal-inspired conversation list
-- Search conversations
-- Last message preview
-- Online / Active status (UI)
-- Modern responsive sidebar
-
----
-
-## Messaging
-
-- One-to-one chat interface
-- Real-time messaging using WebSockets
-- Message timestamps
-- Signal-style message bubbles
-- End-to-end encryption indicator (UI simulation)
-
----
-
-## User Interface
-
-- Signal-inspired landing page
-- Responsive dashboard
-- Clean minimal interface
-- Dark / Light theme support
-- Animated transitions using Motion
-- Modern component-based architecture
-
----
-
-## Backend
-
-- FastAPI REST APIs
-- SQLAlchemy ORM
-- SQLite Database
-- WebSocket support
-- Clean modular architecture
-
----
-
-# Tech Stack
-
-## Frontend
-
+### Frontend
 - React
 - TypeScript
 - TanStack Router
@@ -78,8 +16,7 @@ The project recreates Signal's modern, privacy-focused interface and core messag
 - Motion
 - Lucide Icons
 
-## Backend
-
+### Backend
 - FastAPI
 - SQLAlchemy
 - SQLite
@@ -89,39 +26,124 @@ The project recreates Signal's modern, privacy-focused interface and core messag
 
 ---
 
-# Project Structure
+# ✨ Features
+
+## Authentication
+
+- User Registration
+- User Login
+- Password Hashing using bcrypt
+- Session-ready authentication flow
+
+---
+
+## Landing Page
+
+- Signal-inspired landing page
+- Responsive hero section
+- Feature showcase
+- Modern UI animations
+
+---
+
+## Dashboard
+
+- Signal-style conversation sidebar
+- Conversation search
+- User profile section
+- Theme toggle
+- Responsive layout
+
+---
+
+## Messaging
+
+- One-to-one chat interface
+- Real-time communication using WebSockets
+- Message timestamps
+- Signal-style message bubbles
+- End-to-end encryption indicator (UI simulation)
+
+---
+
+## Backend APIs
+
+### REST APIs
+
+- Register User
+- Login User
+- Health Check
+
+### WebSocket
+
+- Real-time messaging endpoint
+
+---
+
+## Database
+
+SQLite database with SQLAlchemy ORM.
+
+### User Table
+
+| Field | Type |
+|-------|------|
+| id | Integer |
+| username | String |
+| email | String |
+| password | Hashed String |
+
+---
+
+## Message Table
+
+| Field | Type |
+|-------|------|
+| id | Integer |
+| sender_id | Integer |
+| receiver_id | Integer |
+| content | Text |
+| created_at | Timestamp |
+
+---
+
+# 🏗 Project Structure
 
 ```
-.
-├── backend
-│   ├── app
+signal-clone/
+
+│
+├── backend/
+│   ├── app/
 │   │   ├── auth.py
 │   │   ├── database.py
 │   │   ├── main.py
 │   │   ├── models.py
 │   │   ├── schemas.py
 │   │   └── websocket.py
+│   │
 │   └── requirements.txt
 │
-├── src
-│   ├── components
-│   ├── routes
-│   ├── lib
-│   ├── assets
-│   └── styles
+├── src/
+│   ├── components/
+│   ├── routes/
+│   ├── assets/
+│   ├── lib/
+│   └── styles/
 │
-├── public
-└── package.json
+├── public/
+├── package.json
+└── README.md
 ```
 
 ---
 
-# Architecture
+# 🏛 Architecture
 
 ```
                 React Frontend
                        │
-            REST API + WebSockets
+          REST APIs + WebSockets
                        │
                  FastAPI Backend
                        │
@@ -132,36 +154,9 @@ The project recreates Signal's modern, privacy-focused interface and core messag
 
 ---
 
-# Database Schema
+# 📡 API Overview
 
-## Users
-
-| Field | Type |
-|--------|------|
-| id | Integer |
-| username | String |
-| email | String |
-| password | Hashed Password |
-
----
-
-## Messages
-
-| Field | Type |
-|--------|------|
-| id | Integer |
-| sender_id | Integer |
-| receiver_id | Integer |
-| content | Text |
-| created_at | Timestamp |
-
----
-
-# API Overview
-
-## Authentication
-
-### Register
+## Register
 
 ```
 POST /register
@@ -171,17 +166,17 @@ Creates a new user.
 
 ---
 
-### Login
+## Login
 
 ```
 POST /login
 ```
 
-Authenticates a user.
+Authenticates an existing user.
 
 ---
 
-### Health Check
+## Health Check
 
 ```
 GET /
@@ -197,23 +192,23 @@ Backend status endpoint.
 ws://localhost:8000/ws/{user_id}
 ```
 
-Provides real-time messaging between connected users.
+Used for real-time messaging between connected users.
 
 ---
 
-# Setup Instructions
+# ⚙️ Installation
 
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ritiksharma2204/serene-whispers-51.git
 
-cd signal-clone
+cd serene-whispers-51
 ```
 
 ---
 
-# Backend Setup
+## Backend Setup
 
 ```bash
 cd backend
@@ -229,19 +224,19 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run
+Run backend
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-Backend runs on
+Backend
 
 ```
 http://localhost:8000
 ```
 
-Swagger Documentation
+Swagger
 
 ```
 http://localhost:8000/docs
@@ -249,9 +244,15 @@ http://localhost:8000/docs
 
 ---
 
-# Frontend Setup
+## Frontend Setup
 
-Install dependencies
+Return to project root
+
+```bash
+cd ..
+```
+
+Install packages
 
 ```bash
 npm install
@@ -263,7 +264,7 @@ Run
 npm run dev
 ```
 
-Frontend runs on
+Frontend
 
 ```
 http://localhost:8081
@@ -271,78 +272,79 @@ http://localhost:8081
 
 ---
 
-# Real-Time Communication
+# 🔄 Real-Time Messaging
 
-Real-time messaging is implemented using **FastAPI WebSockets**.
-
-Workflow:
+The application uses **FastAPI WebSockets** to establish persistent connections between clients for instant message delivery.
 
 ```
-Browser A
-      │
-      ▼
- WebSocket
-      │
- FastAPI
-      │
- WebSocket
-      ▼
-Browser B
+User A
+   │
+   ▼
+FastAPI WebSocket
+   │
+SQLite
+   │
+   ▼
+User B
 ```
 
 ---
 
-# Design Goals
+# 🎨 UI Highlights
 
-The UI was designed to closely resemble the original Signal Messenger by focusing on:
-
-- Minimal design
-- Privacy-first appearance
-- Conversation-first workflow
-- Responsive layout
-- Smooth animations
-- Clean typography
-- Familiar Signal color palette
+- Signal-inspired layout
+- Clean conversation list
+- Responsive chat interface
+- Modern animations
+- Dark mode support
+- Minimalistic design
+- Privacy-first visual experience
 
 ---
 
-# Assumptions
+# 📌 Current Limitations
 
-- Phone number verification is mocked.
-- End-to-end encryption is simulated through the interface only.
-- Voice and video calls are placeholders.
-- Authentication is simplified for demonstration purposes.
+The following features are intentionally simplified or mocked for the scope of this assignment:
+
+- Phone verification
+- End-to-end encryption (UI simulation)
+- Voice & Video Calls
+- Stories
+- Linked Devices
+- Group Chats
+- Typing Indicators
+- Read Receipts
+- File Attachments
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
-- Group messaging
-- Attachments
-- Emoji reactions
-- Read receipts
-- Typing indicators
-- User presence
 - JWT Authentication
-- Docker support
-- PostgreSQL deployment
-- File uploads
-- Push notifications
+- Group Messaging
+- Typing Indicators
+- Read Receipts
+- Emoji Reactions
+- File Sharing
+- Push Notifications
+- PostgreSQL Support
+- Docker Deployment
+- Cloud Deployment
 
 ---
 
-
-# Author
+# 👨‍💻 Author
 
 **Ritik Sharma**
 
 B.Tech Geoinformatics  
 Netaji Subhas University of Technology (NSUT)
 
-GitHub: https://github.com/ritiksharma2204
+GitHub:
+https://github.com/ritiksharma2204
 
 ---
 
-# License
+# 📄 License
 
-This project was developed for educational purposes as part of an SDE Full-Stack Assignment.
+This project was developed solely for educational purposes as part of an SDE Full Stack Assignment.
